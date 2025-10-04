@@ -1,0 +1,170 @@
+/* Water Advisory Theme - Professional Colors */
+:root {
+  /* Primary Colors - Water & Nature Inspired */
+  --primary-blue: #1a56db;
+  --primary-blue-light: #3f83f8;
+  --primary-blue-dark: #1e40af;
+  --primary-cyan: #0891b2;
+  --primary-cyan-light: #06b6d4;
+  --primary-cyan-dark: #0e7490;
+  
+  /* Secondary Colors - Earth & Growth */
+  --secondary-green: #047857;
+  --secondary-green-light: #10b981;
+  --secondary-green-dark: #065f46;
+  --secondary-sand: #d97706;
+  --secondary-sand-light: #f59e0b;
+  --secondary-sand-dark: #b45309;
+  
+  /* Status Colors */
+  --status-success: #10b981;
+  --status-warning: #f59e0b;
+  --status-error: #dc2626;
+  --status-info: #3b82f6;
+  
+  /* Neutral Colors */
+  --neutral-white: #ffffff;
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+  
+  /* Gradients */
+  --gradient-ocean: linear-gradient(135deg, var(--primary-blue), var(--primary-cyan));
+  --gradient-forest: linear-gradient(135deg, var(--secondary-green), var(--primary-cyan));
+  --gradient-sunset: linear-gradient(135deg, var(--secondary-sand), var(--primary-cyan-light));
+  --gradient-earth: linear-gradient(135deg, var(--secondary-sand-dark), var(--secondary-green-dark));
+  
+  /* Shadows */
+  --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-strong: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-float: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* Border Radius */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-xlarge: 24px;
+  --radius-round: 50%;
+  
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  
+  /* Typography */
+  --font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+  color: var(--neutral-800);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  min-height: 100vh;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Responsive Grid */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.grid-1 { grid-template-columns: 1fr; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Add to the end of theme.css */
+
+/* Main Content */
+.main-content {
+  margin-top: 80px; /* Height of navbar */
+  min-height: calc(100vh - 80px);
+}
+
+.page-container {
+  padding: var(--space-3xl) var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-container h1 {
+  text-align: center;
+  color: var(--neutral-700);
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 { grid-template-columns: 1fr; }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+}
